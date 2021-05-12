@@ -1,0 +1,4 @@
+rootProject.name = "RouterDemo"
+include ':app'
+include ':ModuleA'
+include ':Router'
