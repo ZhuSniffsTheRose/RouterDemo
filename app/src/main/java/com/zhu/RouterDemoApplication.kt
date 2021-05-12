@@ -1,9 +1,7 @@
 package com.zhu
 
 import android.app.Application
-import com.zhu.modulea.ModuleAMainActivity
-import com.zhu.router.RouterHandler
-import com.zhu.routerdemo.MainActivity
+import com.zhu.router.RouterManager
 
 /**
  * @author Zhu
@@ -13,7 +11,7 @@ import com.zhu.routerdemo.MainActivity
 class RouterDemoApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        RouterHandler.register("main/main", MainActivity::class.java)
-        RouterHandler.register("moduleA/main", ModuleAMainActivity::class.java)
+
+        RouterManager.getInstance().init(this)
     }
 }
